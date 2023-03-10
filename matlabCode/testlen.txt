@@ -1,0 +1,17 @@
+% 给定点A和点B的经纬度坐标
+% latlonA = [40.7128, -74.0060]; % A点纬度和经度
+% latlonB = [51.5074, -0.1278]; % B点纬度和经度
+latlonA = [46.5238753000141 6.56673070000000];
+latlonB = [46.5234200000000 6.56675410000000];
+% 将经纬度坐标转换为弧度
+latlonA = deg2rad(latlonA);
+latlonB = deg2rad(latlonB);
+
+% 地球平均半径（单位：米）
+R = 6371000+ 579.2;
+
+% 计算欧拉距离（单位：米）
+distance = R * acos(cos(latlonA(1))*cos(latlonB(1))*cos(latlonB(2)-latlonA(2)) + sin(latlonA(1))*sin(latlonB(1)));
+
+% 输出结果
+disp(['点A和点B之间的欧拉距离为 ', num2str(distance), ' 米']);

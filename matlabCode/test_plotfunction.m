@@ -1,0 +1,11 @@
+clc
+clear
+close('all')
+t=0:0.1:pi;
+y1=sin(t);
+y2=cos(t);
+fig1=subplot(1,2,1);
+c1=plot(t,y1,'r');
+cla(c1)
+fig2=subplot(1,2,2);
+c3=plot(t,y2,'r');

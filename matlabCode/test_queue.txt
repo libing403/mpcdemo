@@ -1,0 +1,19 @@
+% 创建一个空队列
+q = Queue();
+
+% 向队列中添加元素
+q.enqueue(1);
+q.enqueue(2);
+q.enqueue(3);
+
+% 从队列中移除元素
+element = q.dequeue();
+
+% 显示移除的元素
+disp(element);
+
+% 显示队列中剩余元素
+while ~q.isempty()
+    element = q.dequeue();
+    disp(element);
+end

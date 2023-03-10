@@ -1,0 +1,5 @@
+function B=calc_bandwidth(im,degrad)
+%降级%1，带宽为原始的62.5%
+B=size(:,1)*size(:,2)*3*0.625;
+
+end
